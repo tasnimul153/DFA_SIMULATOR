@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 720px;
+    font-family: 'Oxygen', sans-serif;
+    background: url("texture/egg-shell.png");
+}
+
+::-webkit-scrollbar { width: 0 !important }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+i {
+    color: lime;
+}
+
+#success {
+    line-height: 55px;
+    text-align: center;
+    font-size: 25px;
+    height: 60px;
+    width: 250px;
+    top: -60px;
+    padding: 0px 10px;
+    border-radius: 60px;
+    position: absolute;
+    left: 44%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+#ajaira_div {
+    height: 100px;
+    width: 200px;
+    background: rgb(241, 241, 241);
+    position: absolute;
+    box-shadow: 50px 50px 50px 50px rgb(241, 241, 241);
+    z-index: 2;
+}
+
+#information_box {
+    height: auto;
+    width: auto;
+    position: absolute;
+    z-index: 3;
+    color: wheat;
+    overflow: hidden;
+    left: 10px;
+    border-radius: 5px;
+    top: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#information_box p {
+    padding-left: 20px;
+    transition: 0.5s;
+}
+
+#test_button {
+    height: 20px;
+    width: 50px;
+    padding: 3px 7px;
+    border: 1px solid wheat;
+    color: wheat;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    margin: 10px auto 20px auto;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+}
+
+#test_button:hover {
+    background: wheat;
+    color: black;
+}
+
+#tresult {
+    background: wheat;
+    padding: 2px 10px;
+    color: black;
+    margin-left: 3px;
+    border-radius: 20px;
+}
+
+#mydg {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#information_box input[type="text"] {
+    margin: 10px 30px;
+    height: 30px;
+    width: 180px;
+    padding: 0px 5px;
+    background: rgba(0, 0, 0, 0.0);
+    border: none;
+    border-bottom: 2px solid wheat;
+    font-size: 20px;
+    color: wheat;
+}
+
+#information_box input[type="text"]::placeholder {
+    color: wheat;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline-width: 0;
+}
+
+::placeholder {
+    color: wheat;
+    font-size: 15px;
+}
+
+#mainBox {
+    height: 300px;
+    width: 600px;
+    position: absolute;
+    z-index: 6;
+    left: 35%;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+    top: 100px;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+#fiid {
+    height: 300px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+#fiid2 {
+    height: 300px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: scroll;
+    display: none;
+}
+
+#fiid3 {
+    height: 500px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: scroll;
+    display: none;
+}
+
+#fiid3 p {
+    margin-bottom: 1px;
+}
+
+#buttons {
+    display: grid;
+    margin: 50px auto;
+    width: 300px;
+    grid-template-columns: auto auto;
+    grid-column-gap: 5px;
+}
+
+.btn {
+    text-align: center;
+    height: auto;
+    width: auto;
+    padding: 5px 0px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+input[type="number"], #connBox input[type="text"]{
+    border: none;
+    color: white;
+    padding: 3px 5px;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+#fiid input[type="number"] {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#submitButton {
+    height: 30px;
+    width: 60%;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 50px auto;
+}
+#submitButton:hover {
+    background: white;
+    color: black;
+}
+
+#close i {
+    margin-left: 70px;
+    color: white;
+    cursor: pointer;
+}
+
+#connInfo {
+    height: auto;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    position: absolute;
+    z-index: 8;
+    right: 10px;
+    top: 10px;
+    display: none;
+}

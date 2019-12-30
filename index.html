@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-----------------------------------------------------------------------Explicit CSS------------------------------------------------------------->
+    <link rel="stylesheet" href="index.css">
+    <!-----------------------------------------------------------------------Font Awesome------------------------------------------------------------->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-----------------------------------------------------------------------Google font oxygen------------------------------------------------------->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+    <!-----------------------------------------------------------------------For Gojs----------------------------------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/2.1.2/go-debug-module.js" integrity="sha256-dNb3X2sSoj635xcHmuGt5GqgptnN1mjbQOep21Ki9zM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/2.1.2/go-debug.js" integrity="sha256-YedbpPDCCwvx1GNlRCU333c2bhrSEFJVb0Vko6UeA1c=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/2.1.2/go-module.js" integrity="sha256-DRFnXo1BlpCDnsWofQPUhqSmQsGg3n2309wZLTmyKas=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/2.1.2/go.js" integrity="sha256-Dd84XqFafS0GyY2Gi/2igMJa6M4t7WFNhkfAvE2QAAU=" crossorigin="anonymous"></script>
+    <!-----------------------------------------------------------------------For jQuery--------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>DFA Simulator</title>
+</head>
+<body>
+    <!----------------------------------------------------------------Connection information---------------------------------------------------------->
+    <div id="connInfo">
+        <div id="close"><span style="font-weight: bold; font-size: 20px;">Connections</span><i class="fa fa-times" aria-hidden="true" id="cross"></i></div>
+    </div>
+    <!----------------------------------------------------------------------Notification-------------------------------------------------------------->
+    <div id="success"></div>
+    <!------------------------------------------------------------------Not useless actually---------------------------------------------------------->
+    <div id="ajaira_div"></div>
+    <!---------------------------------------------------------------------For diagrams--------------------------------------------------------------->
+    <div id="mydg"></div>
+    <!--------------------------------------------------------------Controll and information box------------------------------------------------------>
+    <div id="mainBox">
+        <form action="">
+            <div id="fiid">
+                Number of states: 
+                <input type="number" id="num_of_states"><br>
+                Number of ac states:
+                <input type="number" id="num_of_ac_states">
+                <div id="submitButton">
+                    Submit
+                </div>
+            </div>
+            <div id="fiid2">
+                <h2 id="ac_state_title">Tick accepted states</h2>
+            </div>
+            <div id="fiid3">
+                <h2 id="ac_state_title">Add connections</h2>
+                <p style="margin-top: -18px; font-size: 18px; letter-spacing: 3px;">To add nodes put <span style="color: rgb(0, 0, 0); background-color: white; padding: 2px 5px; border-radius: 100px;">'i'</span> instead of 
+                    <span span style="color: rgb(0, 0, 0); background-color: white; padding: 2px 5px; border-radius: 100px;">'Si'</span> without the quots. Input fields should not be empty.</p>
+                <div id="connBox">
+                    <p>From</p>
+                    <input type="number" name="" id="from_" class="input">
+                    <p>To</p>
+                    <input type="number" name="" id="to_" class="input">
+                    <p>Label</p>
+                    <input type="text" name="" id="label_" class="input" maxlength="1">
+                </div>
+                <div id="buttons">
+                    <div class="btn" id="btn1">Done</div>
+                    <div class="btn" id="btn2">Add</div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="information_box">
+        <div id="infos">
+            <p>Label: <span style="color: aqua;">@</span> for {A..Z/a..z/0..9}</p>
+            <p>Number of connections: <span id="nconnection">0</span></p>
+            <p>Start state: S0</p>
+            <p>Number of states: <span id="nstate">1</span></p>
+            <p id="nac">Number of ac_state: <span id="nacstate">0</span></p>
+            <p>Test Result: <span id="tresult">N/A</span></p>
+            <form action="">
+                <input type="text" placeholder="Check validation" id="test_str">
+            </form>
+            <div id="test_button">Test</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
